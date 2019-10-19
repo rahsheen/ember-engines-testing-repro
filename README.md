@@ -1,7 +1,8 @@
 # ember-engines-testing
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repository is a reproduction of an issue which occurs when testing Ember components within an in-repo engine. In order to test such components, the Ember Resolver must be modified to be able to resolve these components. 
+
+The problem is that, in modifying the resolver in this way, the _Integration Test_ code is no longer able to resolve the host app models. This means that it's not possible to easily mock out more complex model relationships for testing components. Also, add-ons like Ember CLI Mirage and FactoryGuy are rendered useless.
 
 ## Prerequisites
 
